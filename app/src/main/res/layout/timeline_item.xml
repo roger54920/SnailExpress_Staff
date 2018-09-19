@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:paddingRight="@dimen/px_32"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/rlTimeline"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTopLine"
+            android:layout_width="@dimen/px_1"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@color/cl_6fd1c8" />
+
+        <TextView
+            android:layout_width="@dimen/px_1"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tvDot"
+            android:layout_centerHorizontal="true"
+            android:background="@color/cl_6fd1c8" />
+
+        <ImageView
+            android:id="@+id/tvDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/point_item_icon"
+            android:layout_below="@+id/tvTopLine"
+           />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginLeft="@dimen/px_30"
+        android:id="@+id/rlCenter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="@dimen/px_7"
+        android:paddingRight="@dimen/px_10"
+        android:paddingTop="@dimen/px_32">
+
+        <TextView
+            android:id="@+id/tvAcceptTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2014/06/24 20:55:28"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:id="@+id/tvAcceptStation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvAcceptTime"
+            android:layout_marginTop="@dimen/px_10"
+            android:text="快件在 深圳 ,准备送往下一站 深圳集散中心 [深圳市]"
+            android:textColor="@color/cl_999999"
+            android:textSize="@dimen/px_28" />
+    </RelativeLayout>
+</LinearLayout>

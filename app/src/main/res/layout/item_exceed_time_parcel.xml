@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:paddingLeft="@dimen/px_32"
+    android:layout_marginBottom="@dimen/px_20"
+    android:background="@color/white"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/zz_state"
+        android:layout_marginRight="@dimen/px_32"
+        android:text="用户申请超期保管"
+        android:textSize="@dimen/px_26"
+        android:textColor="@color/cl_6fd1c8"
+        android:layout_marginTop="@dimen/px_20"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <com.example.me_jie.snailexpress_staff.custom.FullPhotoView
+        android:layout_below="@+id/zz_state"
+        android:id="@+id/fullPhotoView"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_140"
+        android:layout_marginRight="@dimen/px_32"
+        android:layout_marginTop="@dimen/px_20"
+        android:src="@drawable/check_large_icon" />
+
+    <TextView
+        android:id="@+id/haulier_source"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fullPhotoView"
+        android:layout_marginTop="@dimen/px_20"
+        android:text="承运来源：EMS"
+        android:textColor="@color/cl_999999"
+        android:textSize="@dimen/px_26" />
+
+    <TextView
+        android:id="@+id/express_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/haulier_source"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="快递单号：11891495555203"
+        android:textColor="@color/cl_999999"
+        android:textSize="@dimen/px_26" />
+    <TextView
+        android:id="@+id/sir_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/express_number"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="李先生"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_30" />
+    <TextView
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_toRightOf="@+id/sir_name"
+        android:id="@+id/sir_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/express_number"
+        android:layout_marginTop="@dimen/px_16"
+        android:text="北京市朝阳区望京花家北理1号楼3门806"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_28" />
+    <TextView
+        android:layout_marginLeft="@dimen/px_20"
+        android:layout_toRightOf="@+id/sir_name"
+        android:id="@+id/sir_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sir_address"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="13900101234"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_28" />
+    <ImageView
+        android:layout_marginRight="@dimen/px_32"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/px_10"
+        android:layout_below="@+id/sir_address"
+        android:src="@drawable/phone_icon"
+        android:layout_width="@dimen/px_44"
+        android:layout_height="@dimen/px_44" />
+    <ImageView
+        android:id="@+id/img"
+        android:layout_below="@+id/sir_phone"
+        android:layout_marginTop="@dimen/px_25"
+        android:layout_marginLeft="@dimen/px_32"
+        android:src="@drawable/timeline_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:text="超期保管第一天 费用:5元"
+        android:id="@+id/context"
+        android:layout_marginLeft="@dimen/px_30"
+        android:layout_below="@+id/sir_phone"
+        android:layout_marginTop="@dimen/px_25"
+        android:layout_toRightOf="@+id/img"
+        android:textColor="@color/cl_666666"
+        android:textSize="@dimen/px_28"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/item_exceed_time_rv"
+        android:layout_marginBottom="@dimen/px_20"
+        android:layout_marginLeft="@dimen/px_32"
+        android:layout_below="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</RelativeLayout>

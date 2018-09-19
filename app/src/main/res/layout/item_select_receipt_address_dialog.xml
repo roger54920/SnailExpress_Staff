@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:paddingLeft="@dimen/px_30"
+    android:paddingRight="@dimen/px_30"
+    android:layout_height="wrap_content">
+    <RadioButton
+        android:layout_marginTop="@dimen/px_25"
+        android:singleLine="true"
+        android:id="@+id/radio"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/px_60"
+        android:layout_centerVertical="true"
+        android:background="@color/transparence"
+        android:button="@drawable/select_address_radio_style"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/px_20"
+        android:text="1111111111111111111111"
+        android:textColor="@color/radiobutton_textcolor"
+        android:textSize="@dimen/px_28" />
+</LinearLayout>

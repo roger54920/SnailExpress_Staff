@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/px_32">
+    <TextView
+        android:id="@+id/goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/px_20"
+        android:text="日用品"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/cyly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_expressage_state"
+        android:layout_marginTop="@dimen/px_25"
+        android:text="@string/sender"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/sender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send_expressage_state"
+        android:layout_marginTop="@dimen/px_25"
+        android:layout_toRightOf="@+id/cyly"
+        android:text="刘XX 北京市大兴区北京经济技术开发区"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+    <TextView
+        android:id="@+id/cyly_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyly"
+        android:layout_marginTop="@dimen/px_25"
+        android:text="@string/sender_phone_number"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/sender_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyly"
+        android:layout_marginTop="@dimen/px_25"
+        android:layout_toRightOf="@+id/cyly_phone"
+        android:text="17783282913"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/addressee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyly_phone"
+        android:layout_marginTop="@dimen/px_15"
+        android:layout_toRightOf="@+id/kddh"
+        android:text="王XX 北京市海淀区联想桥"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/kddh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyly_phone"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="@string/recipients"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/addressee"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="包裹重量为：25KG"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/delivery_costs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/weight"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="包裹快递费用为：15元"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/shipperCode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/delivery_costs"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="所选承运公司为：EMS"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/courier_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/shipperCode"
+        android:text="快递单号：20161218041301"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:layout_alignParentRight="true"
+        android:id="@+id/send_expressage_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:text=""
+        android:textColor="@color/cl_6fd1c8"
+        android:textSize="@dimen/px_26"
+        android:layout_alignTop="@+id/goodsname"
+        />
+    <TextView
+        android:layout_below="@+id/shipperCode"
+        android:layout_marginTop="@dimen/px_15"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/cl_6fd1c8"
+        android:textSize="@dimen/px_26"
+        android:id="@+id/courier_sender_state"
+        android:text="快递员01正在派件中"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:textColor="@color/cl_333333"
+    android:textSize="@dimen/px_30"
+    android:layout_marginBottom="@dimen/px_20"
+    android:id="@+id/context"
+    android:text="快递员01 陈XX 代收包裹1件"
+    />
+

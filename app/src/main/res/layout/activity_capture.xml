@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mipca_capture_fl"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5">
+
+        <cn.bingoogolapple.qrcode.zxing.ZXingView
+            android:layout_below="@+id/one"
+            android:id="@+id/zxingview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:qrcv_animTime="1000"
+            app:qrcv_borderColor="@android:color/white"
+            app:qrcv_borderSize="1dp"
+            app:qrcv_cornerColor="#09bb07"
+            app:qrcv_cornerLength="20dp"
+            app:qrcv_cornerSize="3dp"
+            app:qrcv_customScanLineDrawable="@drawable/scan_icon_scanline"
+            app:qrcv_isBarcode="false"
+            app:qrcv_isCenterVertical="false"
+            app:qrcv_isOnlyDecodeScanBoxArea="false"
+            app:qrcv_isScanLineReverse="false"
+            app:qrcv_isShowDefaultGridScanLineDrawable="false"
+            app:qrcv_isShowDefaultScanLineDrawable="true"
+            app:qrcv_isShowTipBackground="true"
+            app:qrcv_isShowTipTextAsSingleLine="false"
+            app:qrcv_isTipTextBelowRect="true"
+            app:qrcv_maskColor="#33FFFFFF"
+            app:qrcv_qrCodeTipText="将二维码/条码放入框内，即可自动扫描"
+            app:qrcv_rectWidth="200dp"
+            app:qrcv_scanLineColor="#09bb07"
+            app:qrcv_scanLineMargin="0dp"
+            app:qrcv_scanLineSize="0.5dp"
+            app:qrcv_tipTextColor="@android:color/white"
+            app:qrcv_tipTextSize="12sp"
+            app:qrcv_toolbarHeight="56dp"
+            app:qrcv_topOffset="90dp"/>
+        <RelativeLayout
+            android:layout_marginBottom="@dimen/px_210"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@color/cl_333333"
+                android:text="@string/open_flashlight"
+                android:textSize="16sp"
+                android:id="@+id/open_flashlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_32"
+                android:visibility="gone"
+                android:text="@string/close_flashlight"
+                android:id="@+id/close_flashlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/one"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_96"
+            android:background="@color/cl_6fd1c8">
+
+            <ImageView
+                android:padding="@dimen/px_20"
+                android:id="@+id/return_arrows"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_12"
+                android:src="@mipmap/left_icon" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="站长扫码"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px_36"
+                android:textStyle="normal" />
+            <TextView
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/px_32"
+                android:textColor="@color/white"
+                android:textSize="@dimen/px_30"
+                android:text="@string/camera"
+                android:id="@+id/choose_qrcde_from_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <Button
+            android:id="@+id/find_addressee"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_96"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@color/cl_6fd1c8"
+            android:gravity="center"
+            android:text="查询已收件"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_32" />
+    </RelativeLayout>
+</RelativeLayout>

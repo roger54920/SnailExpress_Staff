@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Codelibrary/Codelibrary.iml" filepath="$PROJECT_DIR$/Codelibrary/Codelibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SnailExpress_Staff.iml" filepath="$PROJECT_DIR$/SnailExpress_Staff.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/autolayout/autolayout.iml" filepath="$PROJECT_DIR$/autolayout/autolayout.iml" />
+      <module fileurl="file://$PROJECT_DIR$/baseadapter-recyclerview/baseadapter-recyclerview.iml" filepath="$PROJECT_DIR$/baseadapter-recyclerview/baseadapter-recyclerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/okgo/okgo.iml" filepath="$PROJECT_DIR$/okgo/okgo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pickerview/pickerview.iml" filepath="$PROJECT_DIR$/pickerview/pickerview.iml" />
+      <module fileurl="file://$PROJECT_DIR$/searchbox/searchbox.iml" filepath="$PROJECT_DIR$/searchbox/searchbox.iml" />
+      <module fileurl="file://$PROJECT_DIR$/tkrefreshlayout/tkrefreshlayout.iml" filepath="$PROJECT_DIR$/tkrefreshlayout/tkrefreshlayout.iml" />
+    </modules>
+  </component>
+</project>

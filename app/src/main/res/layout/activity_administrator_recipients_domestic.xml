@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/cl_6fd1c8"
+    tools:context=".ui.AdministratorRecipientsDomesticActivity">
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/accept"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+    <com.example.me_jie.snailexpress_staff.custom.MyScrollview
+        android:background="@color/cl_f5f5f5"
+        android:paddingTop="@dimen/px_30"
+        android:id="@+id/myScrollview"
+        android:layout_marginBottom="@dimen/px_96"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/one">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32">
+
+                <com.example.me_jie.snailexpress_staff.custom.FullPhotoView
+                    android:scaleType="fitXY"
+                    android:layout_below="@+id/zz_state"
+                    android:id="@+id/fullPhotoView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/px_140"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:src="@drawable/check_large_icon" />
+
+                <TextView
+                    android:id="@+id/haulier_source"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/fullPhotoView"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="@string/carrier_source"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <TextView
+                    android:id="@+id/express_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/haulier_source"
+                    android:layout_marginTop="@dimen/px_15"
+                    android:text="@string/tracking_number"
+                    android:textColor="@color/cl_999999"
+                    android:textSize="@dimen/px_26" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/px_20"
+                    android:layout_below="@+id/express_number"
+                    android:id="@+id/container_number"
+                    android:text="货柜编号：A001"
+                    android:textSize="@dimen/px_30"
+                    android:textColor="@color/cl_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+            <include layout="@layout/timer_shaft_layout"/>
+        </LinearLayout>
+
+    </com.example.me_jie.snailexpress_staff.custom.MyScrollview>
+
+    <Button
+        android:id="@+id/confirmation_inspection_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cl_6fd1c8"
+        android:gravity="center"
+        android:text="@string/confirm_delivery"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32" />
+</RelativeLayout>

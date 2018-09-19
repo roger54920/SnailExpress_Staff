@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.me_jie.snailexpress_staff"
+    android:versionCode="1"
+    android:versionName="1.0">
+
+    <!-- 二维码 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <!-- 照相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!-- 闪光灯权限 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <!-- 网络监控 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 讯飞语音听写 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 悬浮框权限 -->
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <application
+        android:name=".app.GApp"
+        android:allowBackup="true"
+        android:icon="@mipmap/logo_icon"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ui.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="design_width"
+            android:value="720" />
+        <meta-data
+            android:name="design_height"
+            android:value="1280" />
+
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.StaffRegisterActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.AdministratorHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.AdministratorParcelParticularsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.RecipientsMessageEnteringActivity"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|orientation|screenLayout|fontScale"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity android:name=".custom.speech.setting.IatSettings" />
+        <activity
+            android:name=".ui.CollectingOverdueActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.AdministratorRecipientsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.AdministratorRecipientsDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AdministratorRecipientsOverseaActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AdministratorRecipientsDomesticActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserScanQRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.UserScanQRCodeAffirmActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InformationCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AdministratorExpressDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.SendExpressageActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ReceiveExpressageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ReceiveExpressageTwoActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ReceiveExpressageThreeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AnomalyMailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AnomalyMailSecurityActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ReceiveExpressageContainerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ReceiveExpressageInputContainerActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ExceedTimeParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.ExceedTimeParcelChargeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.CollectionPaymentDisplayActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.CollectionParcelParticularsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StationAgentSignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StationAgentSignOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StationAgentAuthorizationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffHomeActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.ThenAllocationParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffInformationCollectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffExpressageMessageActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.StaffUserQRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffUserEvaluateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.StaffCourierServiceParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffExpressageDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.StaffExpressageDetailsWeightActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.StaffTakingParcelActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffPerformanceFindActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.StaffHandoverActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PublicSecuritySignInActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PublicSecuritySignOutActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PublicSecurityDeliveryDetailsActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.PublicSecurityUserScanQRCodeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.InformSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendMessageEnteringActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.PublicSecurityParcelDetailsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.MipcaActivityCapture"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.AdministratorCameraActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.PreviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".ui.AdministratorRecipientsTakeTheirActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.SendCasesAffirmActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <activity
+            android:name=".ui.SendNewSiteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan" />
+        <!-- 网络监听 -->
+        <activity
+            android:name=".activity.BaseActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ui.HomeShowDataMoreActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ui.ClipImageActivity"/>
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.example.me_jie.snailexpress_staff.fileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+    </application>
+</manifest>

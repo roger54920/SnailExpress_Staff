@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_administrator_home"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.AdministratorHomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/cl_6fd1c8"
+        android:paddingBottom="@dimen/px_20"
+        android:paddingTop="@dimen/px_20">
+
+        <TextView
+            android:id="@+id/QRcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20"
+            android:drawablePadding="@dimen/px_7"
+            android:drawableTop="@drawable/richscan_icon"
+            android:text="@string/scan"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_20" />
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_60"
+            android:layout_marginLeft="@dimen/px_10"
+            android:layout_marginRight="@dimen/px_10"
+            android:layout_toLeftOf="@+id/write_off"
+            android:layout_toRightOf="@+id/QRcode"
+            android:background="@mipmap/wbk_seach"
+            android:drawableLeft="@drawable/edit_seach_icon"
+            android:drawablePadding="@dimen/px_20"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:paddingLeft="@dimen/px_30"
+            android:singleLine="true"
+            android:textColor="@color/cl_333333"
+            android:textColorHint="@color/cl_b3b3b3"
+            android:textCursorDrawable="@drawable/edit_cursor"
+            android:textSize="@dimen/px_28" />
+
+        <TextView
+            android:paddingLeft="@dimen/px_20"
+            android:paddingRight="@dimen/px_20"
+            android:id="@+id/write_off"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/px_12"
+            android:drawablePadding="@dimen/px_7"
+            android:drawableTop="@drawable/out_icon"
+            android:text="@string/write_off"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_20" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5"
+        android:orientation="vertical">
+
+
+        <com.example.me_jie.snailexpress_staff.custom.MyScrollview
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/cl_f5f5f5"
+            android:paddingTop="@dimen/px_30">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_1"
+                    android:layout_marginLeft="@dimen/px_15"
+                    android:layout_marginRight="@dimen/px_15"
+                    android:background="@color/cl_e3e3e3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px_15"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/recipients"
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/ygsj_icon"
+                            android:layout_width="@dimen/px_60"
+                            android:layout_height="@dimen/px_60"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:scaleType="center"
+                            android:src="@drawable/ygsj_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_20"
+                            android:layout_marginTop="@dimen/px_45"
+                            android:layout_toRightOf="@id/ygsj_icon"
+                            android:text="@string/accept"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_28" />
+
+                        <TextView
+                            android:id="@+id/accept_count_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ygsj_icon"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:text="有0件包裹到本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:id="@+id/return_count_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/accept_count_tv"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_12"
+                            android:paddingBottom="@dimen/px_20"
+                            android:text="有0件包裹退回本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/took"
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/yglj_icon"
+                            android:layout_width="@dimen/px_60"
+                            android:layout_height="@dimen/px_60"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:scaleType="center"
+                            android:src="@drawable/yglj_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_20"
+                            android:layout_marginTop="@dimen/px_45"
+                            android:layout_toRightOf="@id/yglj_icon"
+                            android:text="@string/send"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_28" />
+
+                        <TextView
+                            android:id="@+id/sender_count_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/yglj_icon"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:text="有0件包裹到本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/sender_count_tv"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_12"
+                            android:paddingBottom="@dimen/px_20"
+                            android:text=""
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/px_15"
+                        android:background="@color/cl_e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_1"
+                    android:layout_marginLeft="@dimen/px_15"
+                    android:layout_marginRight="@dimen/px_15"
+                    android:background="@color/cl_e3e3e3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px_15"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/unusual_parcel"
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/ygycbg_icon"
+                            android:layout_width="@dimen/px_60"
+                            android:layout_height="@dimen/px_60"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:scaleType="center"
+                            android:src="@drawable/ygycbg_icon" />
+
+                        <TextView
+                            android:id="@+id/yc_parcel_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ygycbg_icon"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:text="有0件包裹到本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/yc_parcel_number"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_12"
+                            android:paddingBottom="@dimen/px_20"
+                            android:text="有0件包裹退回本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/abnormal_package"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_28"
+                            android:layout_above="@+id/yc_parcel_number"
+                            android:layout_alignRight="@+id/yc_parcel_number"
+                            android:layout_alignEnd="@+id/yc_parcel_number"
+                            android:id="@+id/textView" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/detention_parcel"
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/ygcqbg_icon"
+                            android:layout_width="@dimen/px_60"
+                            android:layout_height="@dimen/px_60"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:scaleType="center"
+                            android:src="@drawable/ygcqbg_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_20"
+                            android:layout_marginTop="@dimen/px_45"
+                            android:layout_toRightOf="@id/ygcqbg_icon"
+                            android:text="@string/beyond_parcel"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_28" />
+
+                        <TextView
+                            android:id="@+id/cq_parcel_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ygcqbg_icon"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:text="本站有0件包裹申请超期"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/cq_parcel_number"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_12"
+                            android:paddingBottom="@dimen/px_20"
+                            android:text=""
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/px_15"
+                        android:background="@color/cl_e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_1"
+                    android:layout_marginLeft="@dimen/px_15"
+                    android:layout_marginRight="@dimen/px_15"
+                    android:background="@color/cl_e3e3e3" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/px_15"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/collecting_money"
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/ygdshk_icon"
+                            android:layout_width="@dimen/px_60"
+                            android:layout_height="@dimen/px_60"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:scaleType="center"
+                            android:src="@drawable/ygdshk_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_20"
+                            android:layout_marginTop="@dimen/px_45"
+                            android:layout_toRightOf="@id/ygdshk_icon"
+                            android:text="@string/collection_delivery"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_28" />
+
+                        <TextView
+                            android:id="@+id/ds_parcel_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ygdshk_icon"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:text="有0件包裹到本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ds_parcel_number"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_12"
+                            android:paddingBottom="@dimen/px_20"
+                            android:text="有0件包裹退回本站"
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/sign"
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/white">
+
+                        <ImageView
+                            android:id="@+id/ygdt_icon"
+                            android:layout_width="@dimen/px_60"
+                            android:layout_height="@dimen/px_60"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:scaleType="center"
+                            android:src="@drawable/ygdt_icon" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/px_20"
+                            android:layout_marginTop="@dimen/px_45"
+                            android:layout_toRightOf="@id/ygdt_icon"
+                            android:text="@string/sign_in_out"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_28" />
+
+                        <TextView
+                            android:id="@+id/dt_parcel_number"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/ygdt_icon"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_30"
+                            android:text=""
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/dt_parcel_number"
+                            android:layout_marginLeft="@dimen/px_75"
+                            android:layout_marginTop="@dimen/px_12"
+                            android:paddingBottom="@dimen/px_20"
+                            android:text=""
+                            android:textColor="@color/cl_999999"
+                            android:textSize="@dimen/px_24" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="@dimen/px_1"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/px_15"
+                        android:background="@color/cl_e3e3e3" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_1"
+                    android:layout_marginLeft="@dimen/px_15"
+                    android:layout_marginRight="@dimen/px_15"
+                    android:background="@color/cl_e3e3e3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_10">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/px_32"
+                        android:text="@string/undistributed_task"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_30" />
+
+                    <TextView
+                        android:id="@+id/order_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_12"
+                        android:padding="@dimen/px_20"
+                        android:text="@string/more"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <include layout="@layout/item_express_rob_single" android:visibility="gone" />
+                    <TextView
+                        android:id="@+id/order_no_content"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_28"
+                        android:text="@string/no_unassigned_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_100" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/px_32"
+                        android:text="@string/received_information"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_30" />
+
+                    <TextView
+                        android:id="@+id/receive_expressAccept_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_12"
+                        android:padding="@dimen/px_20"
+                        android:text="@string/more"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <include layout="@layout/item_data_more_accept"  android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/accept_no_content"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_28"
+                        android:text="@string/no_received_information"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_100" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/px_32"
+                        android:text="@string/sent_message"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_30" />
+
+                    <TextView
+                        android:id="@+id/receive_expresssend_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_12"
+                        android:padding="@dimen/px_20"
+                        android:text="@string/more"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_26" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white">
+
+                    <include layout="@layout/item_send_expressgae" android:visibility="gone"/>
+                    <TextView
+                        android:id="@+id/sender_no_content"
+                        android:visibility="gone"
+                        android:gravity="center"
+                        android:textColor="@color/cl_999999"
+                        android:textSize="@dimen/px_28"
+                        android:text="@string/no_sent_message"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_100" />
+                </RelativeLayout>
+            </LinearLayout>
+        </com.example.me_jie.snailexpress_staff.custom.MyScrollview>
+    </LinearLayout>
+</LinearLayout>

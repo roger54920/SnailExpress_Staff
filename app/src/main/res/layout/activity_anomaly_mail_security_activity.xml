@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.AnomalyMailSecurityActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_32"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="异常邮件"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+<com.example.me_jie.snailexpress_staff.custom.MyScrollview
+    android:background="@color/cl_f5f5f5"
+    android:paddingTop="@dimen/px_30"
+    android:id="@+id/myScrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:paddingLeft="@dimen/px_32">
+
+            <TextView
+                android:id="@+id/zz_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_20"
+                android:text="已到达蜗牛站"
+                android:textColor="@color/cl_6fd1c8"
+                android:textSize="@dimen/px_26" />
+
+            <com.example.me_jie.snailexpress_staff.custom.FullPhotoView
+                android:id="@+id/fullPhotoView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/px_140"
+                android:layout_below="@+id/zz_state"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_20"
+                android:src="@drawable/check_large_icon" />
+
+            <TextView
+                android:id="@+id/haulier_source"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fullPhotoView"
+                android:layout_marginTop="@dimen/px_20"
+                android:text="承运来源：EMS"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <TextView
+                android:id="@+id/express_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/haulier_source"
+                android:layout_marginTop="@dimen/px_15"
+                android:text="快递单号：11891495555203"
+                android:textColor="@color/cl_999999"
+                android:textSize="@dimen/px_26" />
+
+            <TextView
+                android:layout_marginBottom="@dimen/px_20"
+                android:layout_below="@+id/express_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_15"
+                android:text="已经超过三小时没有保安响应"
+                android:textColor="@color/cl_6fd1c8"
+                android:textSize="@dimen/px_26" />
+        </RelativeLayout>
+        <LinearLayout
+
+            android:layout_marginTop="@dimen/px_20"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginLeft="@dimen/px_32"
+                android:text="已上线保安："
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/px_20"
+                android:id="@+id/on_line_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <TextView
+                android:layout_marginTop="@dimen/px_70"
+                android:layout_marginLeft="@dimen/px_32"
+                android:text="未上线保安："
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginBottom="@dimen/px_70"
+                android:layout_marginTop="@dimen/px_20"
+                android:id="@+id/no_line_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</com.example.me_jie.snailexpress_staff.custom.MyScrollview>
+</LinearLayout>

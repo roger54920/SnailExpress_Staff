@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.me_jie.snailexpress_staff.custom.SwipeMenuLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="@dimen/px_10"
+    android:clickable="true">
+    <!-- 第一个子view，显示ListView数据内容-->
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/px_20"
+        android:paddingLeft="@dimen/px_32">
+        <include layout="@layout/include_accept" />
+    </LinearLayout>
+
+    <!-- 下面是侧滑菜单项 即：第2+个子view-->
+    <LinearLayout
+        android:id="@+id/side_menu_ll"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/btn_deselect"
+            android:layout_width="@dimen/px_100"
+            android:layout_height="match_parent"
+            android:background="@color/cl_00af0d"
+            android:gravity="center"
+            android:text="@string/take_their"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_30" />
+    </LinearLayout>
+</com.example.me_jie.snailexpress_staff.custom.SwipeMenuLayout>

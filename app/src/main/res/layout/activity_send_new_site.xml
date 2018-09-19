@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_new_add_address"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.SendNewSiteActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:id="@+id/fillout_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="填写寄件人"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_marginBottom="@dimen/px_96"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@id/one"
+        android:background="@color/cl_f5f5f5">
+        <LinearLayout
+            android:layout_marginTop="@dimen/px_30"
+            android:paddingBottom="@dimen/px_40"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/name"
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_20"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:text="@string/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:id="@+id/input_name"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textSize="@dimen/px_30"
+                    android:hint="@string/import_name"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edit_text_shape"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80" />
+
+                <ImageView
+                    android:id="@+id/voice_dictation_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_10"
+                    android:padding="@dimen/px_15"
+                    android:src="@drawable/voice_icon_dictation" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_20"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:text="@string/mobile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_phone"
+                    android:inputType="phone|number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textSize="@dimen/px_30"
+                    android:hint="@string/import_mobile"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/edit_text_shape"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80" />
+
+                <ImageView
+                    android:id="@+id/voice_dictation_mobile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_10"
+                    android:padding="@dimen/px_15"
+                    android:src="@drawable/voice_icon_dictation" />
+            </RelativeLayout>
+            <TextView
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_20"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:text="@string/chelsea"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/input_region"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px_20"
+                android:textSize="@dimen/px_30"
+                android:hint="@string/select_area"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_text_shape"
+                android:layout_below="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80" />
+            <TextView
+                android:layout_marginTop="@dimen/px_30"
+                android:layout_marginBottom="@dimen/px_20"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:text="@string/detailed_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/input_address"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textSize="@dimen/px_30"
+                    android:hint="@string/import_detailed_address"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:gravity="center_vertical"
+                    android:maxLength="85"
+                    android:background="@drawable/edit_text_shape"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80" />
+                <ImageView
+                    android:id="@+id/voice_dictation_detailed_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/px_10"
+                    android:padding="@dimen/px_15"
+                    android:src="@drawable/voice_icon_dictation" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/confirmation_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cl_6fd1c8"
+        android:gravity="center"
+        android:text="@string/confirm"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32" />
+</RelativeLayout>

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginRight="@dimen/px_32">
+    <TextView
+        android:id="@+id/conllecting_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/px_20"
+        android:text="蜗牛派送中"
+        android:textColor="@color/cl_6fd1c8"
+        android:textSize="@dimen/px_26" />
+
+    <TextView
+        android:id="@+id/cyly"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conllecting_state"
+        android:text="@string/carrier_source"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/express_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/conllecting_state"
+        android:layout_toRightOf="@+id/cyly"
+        android:text="EMS"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/express_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyly"
+        android:layout_marginTop="@dimen/px_15"
+        android:layout_toRightOf="@+id/kddh"
+        android:text="11891495555203"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/kddh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/cyly"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="@string/tracking_number"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/express_datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/express_number"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="2016/12/18  11:00"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+
+    <TextView
+        android:id="@+id/express_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/express_datetime"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="快递员正在派送中，联系电话13811111111"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28"
+        android:visibility="gone" />
+
+    <RelativeLayout
+        android:id="@+id/accept_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/express_phone"
+        android:layout_marginTop="@dimen/px_20">
+
+        <TextView
+            android:id="@+id/sir_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="李先生"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_30" />
+
+        <TextView
+            android:id="@+id/sir_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_30"
+            android:layout_toRightOf="@+id/sir_name"
+            android:singleLine="true"
+            android:text="北京市朝阳区望京花家北理1号楼3门806"
+            android:textColor="@color/cl_666666"
+            android:textSize="@dimen/px_28" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/accept_phone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accept_rl"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="17525652525"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_26" />
+    <TextView
+        android:singleLine="true"
+        android:id="@+id/courier_send_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/cost"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="快递员01正在派件中"
+        android:textColor="@color/cl_6fd1c8"
+        android:textSize="@dimen/px_26" />
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/cost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/accept_phone"
+        android:layout_marginTop="@dimen/px_15"
+        android:text="代付金额："
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_28" />
+</RelativeLayout>

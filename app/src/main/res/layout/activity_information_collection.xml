@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.InformationCollectionActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="信息收集"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/one"
+        android:background="@color/cl_f5f5f5">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_30"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_30"
+                android:text="订购平台："
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+
+            <com.example.me_jie.snailexpress_staff.custom.RadioGroup
+                android:id="@+id/myRadioGroup"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_20"
+                android:gravity="center_vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_90"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="淘宝"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="天猫"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_90"
+
+                    android:layout_marginTop="@dimen/px_40"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="京东"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="苏宁易购"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28"
+                        android:id="@+id/radioButton" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_90"
+
+                    android:layout_marginTop="@dimen/px_40"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="唯品会"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="1号店"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/px_90"
+                    android:layout_marginTop="@dimen/px_40"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="当当网"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="@dimen/px_0"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@color/transparent"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="其他"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                </LinearLayout>
+
+
+            </com.example.me_jie.snailexpress_staff.custom.RadioGroup>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_70"
+                android:text="产品类型："
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_30" />
+
+            <com.example.me_jie.snailexpress_staff.custom.RadioGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/px_40"
+                android:layout_marginLeft="@dimen/px_90"
+                android:layout_marginTop="@dimen/px_20"
+                android:background="@color/transparence"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/transparence"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="食品"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_40"
+                        android:background="@color/transparence"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="服装"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_40"
+                        android:background="@color/transparence"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="文件"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/px_40"
+                        android:background="@color/transparence"
+                        android:button="@drawable/alipay_radio_style"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_40"
+                        android:text="日用品"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_28" />
+                </LinearLayout>
+            </com.example.me_jie.snailexpress_staff.custom.RadioGroup>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/input_information_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cl_6fd1c8"
+        android:gravity="center"
+        android:text="输入信息"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32" />
+</RelativeLayout>

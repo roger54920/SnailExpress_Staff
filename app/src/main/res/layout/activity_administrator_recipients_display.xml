@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.AdministratorRecipientsDisplayActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:id="@+id/title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/accept"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:background="@color/cl_f5f5f5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/px_10"
+        android:paddingTop="@dimen/px_20">
+
+        <RelativeLayout
+            android:id="@+id/select_datetime"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_centerHorizontal="true"
+                android:id="@+id/datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_32" />
+
+            <TextView
+                android:id="@+id/receive_parcel_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/datetime"
+                android:layout_marginBottom="@dimen/px_15"
+                android:layout_marginTop="@dimen/px_10"
+                android:text="(本日共收包裹0件)"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_32" />
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/left_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/hei_zuo" />
+
+        <ImageView
+            android:id="@+id/right_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@drawable/hei_you" />
+    </RelativeLayout>
+    <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+        android:id="@+id/refresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5">
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recipients_display_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+
+    <TextView
+        android:background="@color/cl_f5f5f5"
+        android:id="@+id/no_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="暂无收件信息"
+        android:textColor="@color/cl_999999"
+        android:textSize="@dimen/px_30"
+        android:visibility="gone" />
+</LinearLayout>

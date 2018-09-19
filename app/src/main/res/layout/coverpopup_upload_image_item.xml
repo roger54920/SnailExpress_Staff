@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingRight="@dimen/px_32"
+    android:paddingLeft="@dimen/px_32"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/px_20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/upload_image_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/takePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:gravity="center"
+            android:text="@string/take_picture"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_32" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1px"
+            android:background="@color/cl_e3e3e3" />
+
+        <TextView
+            android:id="@+id/choosePhoto"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_80"
+            android:gravity="center"
+            android:text="@string/album_selection"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_32" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/cancel"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_80"
+        android:background="@drawable/upload_image_bg"
+        android:gravity="center"
+        android:text="@string/cancel"
+        android:textColor="@color/cl_333333"
+        android:textSize="@dimen/px_32" />
+
+
+</LinearLayout>

@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.StaffRegisterActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5"
+        android:orientation="vertical">
+
+        <com.example.me_jie.snailexpress_staff.custom.RadioGroup
+            android:id="@+id/regist_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_20"
+            android:layout_marginTop="@dimen/px_20"
+            >
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/station_agent_radio"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/px_32"
+                android:layout_weight="1"
+                android:background="@color/transparence"
+                android:button="@null"
+                android:checked="true"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="@dimen/px_20"
+                android:text="@string/station_master"
+                android:textColor="@color/radio_textcolor"
+                android:textSize="@dimen/px_30" />
+
+            <RadioButton
+                android:id="@+id/staff_radio"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/transparence"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:drawablePadding="@dimen/px_20"
+                android:paddingLeft="@dimen/px_30"
+                android:text="@string/staff"
+                android:textColor="@color/radio_textcolor"
+                android:textSize="@dimen/px_30" />
+
+            <RadioButton
+                android:id="@+id/ba_radio"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/px_32"
+                android:layout_weight="1"
+                android:background="@color/transparence"
+                android:button="@null"
+                android:drawableLeft="@drawable/radio_style"
+                android:gravity="right|center_vertical"
+                android:paddingLeft="@dimen/px_20"
+                android:text="@string/security_guard"
+                android:textColor="@color/radio_textcolor"
+                android:textSize="@dimen/px_30" />
+            </LinearLayout>
+        </com.example.me_jie.snailexpress_staff.custom.RadioGroup>
+
+        <LinearLayout
+            android:id="@+id/station_agent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px_20"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/xm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/name"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/sr_name"
+                    android:maxLength="11"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_70"
+                    android:layout_toRightOf="@+id/xm"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/px_20"
+                    android:singleLine="true"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/sjh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/mobile"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/sr_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:layout_toRightOf="@+id/sjh"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:inputType="phone|number"
+                    android:maxLength="11"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/yzm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/verification_code"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/sr_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:layout_marginRight="@dimen/px_70"
+                    android:layout_toLeftOf="@+id/get_code"
+                    android:layout_toRightOf="@+id/yzm"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:inputType="phone|number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+
+                <Button
+                    android:id="@+id/get_code"
+                    android:layout_width="@dimen/px_160"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/verify_btn_shape_sel"
+                    android:gravity="center"
+                    android:text="@string/get_code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px_26" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/staff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px_20"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/staff_xm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="姓名"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:maxLength="11"
+                    android:id="@+id/staff_sr_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_70"
+                    android:layout_toRightOf="@+id/staff_xm"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/px_20"
+                    android:singleLine="true"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/staff_sjh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="手机号"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/staff_sr_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:layout_toRightOf="@+id/staff_sjh"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:inputType="phone|number"
+                    android:maxLength="11"
+                    android:paddingLeft="@dimen/px_20"
+                    android:singleLine="true"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/staff_yzm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="验证码"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/staff_sr_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:layout_marginRight="@dimen/px_70"
+                    android:layout_toLeftOf="@+id/staff_get_code"
+                    android:layout_toRightOf="@+id/staff_yzm"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:inputType="phone|number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+
+                <Button
+                    android:id="@+id/staff_get_code"
+                    android:layout_width="@dimen/px_160"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/verify_btn_shape_sel"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px_26" />
+            </RelativeLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/px_20"
+            android:paddingLeft="@dimen/px_32"
+            android:paddingRight="@dimen/px_32"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/security_xm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="姓名"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:maxLength="11"
+                    android:id="@+id/security_sr_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_70"
+                    android:layout_toRightOf="@+id/security_xm"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/px_20"
+                    android:singleLine="true"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/security_sjh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="手机号"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/security_sr_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:layout_toRightOf="@+id/security_sjh"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:inputType="phone|number"
+                    android:maxLength="11"
+                    android:paddingLeft="@dimen/px_20"
+                    android:singleLine="true"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/px_30">
+
+                <TextView
+                    android:id="@+id/security_yzm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="验证码"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_32" />
+
+                <EditText
+                    android:id="@+id/security_sr_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_marginLeft="@dimen/px_38"
+                    android:layout_marginRight="@dimen/px_70"
+                    android:layout_toLeftOf="@+id/security_get_code"
+                    android:layout_toRightOf="@+id/security_yzm"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:inputType="phone|number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:paddingLeft="@dimen/px_20"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+
+                <Button
+                    android:id="@+id/security_get_code"
+                    android:layout_width="@dimen/px_160"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/verify_btn_shape_sel"
+                    android:gravity="center"
+                    android:text="获取验证码"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px_26" />
+            </RelativeLayout>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/px_60">
+
+            <TextView
+                android:id="@+id/tj"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_32"
+                android:layout_marginTop="@dimen/px_30"
+                android:text="@string/click_add_profil"
+                android:textColor="@color/cl_333333"
+                android:textSize="@dimen/px_28" />
+
+            <ImageView
+                android:id="@+id/add_img"
+                android:layout_width="@dimen/px_140"
+                android:layout_height="@dimen/px_140"
+                android:layout_marginLeft="@dimen/px_60"
+                android:layout_toRightOf="@+id/tj"
+                android:src="@drawable/add_img_icon"
+                android:scaleType="fitXY"
+                />
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/commit_btn"
+            android:layout_width="@dimen/px_280"
+            android:layout_height="@dimen/px_80"
+            android:layout_below="@+id/three"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/px_90"
+            android:background="@drawable/button_shape"
+            android:text="@string/submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_32" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/staff"
+        android:paddingBottom="@dimen/px_20"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:paddingLeft="@dimen/px_32"
+        android:paddingRight="@dimen/px_32"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/staff_xm"
+                android:layout_centerVertical="true"
+                android:text="姓名"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_toRightOf="@+id/staff_xm"
+                android:layout_marginLeft="@dimen/px_70"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:id="@+id/staff_sr_name"
+                android:singleLine="true"
+                android:paddingLeft="@dimen/px_20"
+                android:textSize="@dimen/px_30"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_shape"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/staff_sjh"
+                android:layout_centerVertical="true"
+                android:text="手机号"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_toRightOf="@+id/staff_sjh"
+                android:layout_marginLeft="@dimen/px_38"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:id="@+id/staff_sr_phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:inputType="phone|number"
+                android:paddingLeft="@dimen/px_20"
+                android:textSize="@dimen/px_30"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_shape"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px_30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/staff_yzm"
+                android:layout_centerVertical="true"
+                android:text="验证码"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:layout_marginRight="@dimen/px_70"
+                android:layout_toRightOf="@+id/staff_yzm"
+                android:layout_toLeftOf="@+id/staff_get_code"
+                android:layout_marginLeft="@dimen/px_38"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:id="@+id/staff_sr_code"
+                android:singleLine="true"
+                android:inputType="phone|number"
+                android:paddingLeft="@dimen/px_20"
+                android:textSize="@dimen/px_30"
+                android:textColor="@color/cl_333333"
+                android:textColorHint="@color/cl_b3b3b3"
+                android:gravity="center_vertical"
+                android:background="@drawable/edit_shape"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80" />
+            <Button
+                android:id="@+id/staff_get_code"
+                android:text="获取验证码"
+                android:gravity="center"
+                android:textColor="@color/cl_666666"
+                android:textSize="@dimen/px_26"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/verify_btn_shape_nor"
+                android:layout_width="@dimen/px_160"
+                android:layout_height="@dimen/px_60" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="@dimen/px_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/staff_bh"
+                android:layout_centerVertical="true"
+                android:text="蜗牛站点"
+                android:textSize="@dimen/px_32"
+                android:textColor="@color/cl_333333"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <com.example.me_jie.snailexpress_staff.custom.XCDropDownListView
+                android:layout_toRightOf="@+id/staff_bh"
+                android:id="@+id/snail_drop_list"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_80"
+                android:layout_centerHorizontal="true" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

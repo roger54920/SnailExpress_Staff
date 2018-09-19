@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.ReceiveExpressageActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+        <ImageView
+            android:padding="@dimen/px_20"
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="收快递"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+    <com.example.me_jie.snailexpress_staff.custom.MyScrollview
+        android:paddingTop="@dimen/px_30"
+        android:layout_marginBottom="@dimen/px_96"
+        android:background="@color/cl_f5f5f5"
+        android:layout_below="@+id/one"
+        android:id="@+id/myScrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/two"
+                android:background="@color/white"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/ryp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_20"
+                    android:text="日用品"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_20"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:textColor="@color/cl_6fd1c8"
+                    android:textSize="@dimen/px_26"
+                    android:id="@+id/conllecting_state"
+                    android:text="蜗牛快递员正在揽件"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_25"
+                    android:id="@+id/cyly"
+                    android:layout_below="@+id/conllecting_state"
+                    android:text="寄件人："
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_25"
+                    android:layout_toRightOf="@+id/cyly"
+                    android:id="@+id/express_type"
+                    android:layout_below="@+id/conllecting_state"
+                    android:text="刘XX 北京市大兴区北京经济技术开发区"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_15"
+                    android:id="@+id/express_number"
+                    android:layout_toRightOf="@+id/kddh"
+                    android:layout_below="@+id/cyly"
+                    android:text="王XX 北京市海淀区联想桥"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_15"
+                    android:id="@+id/kddh"
+                    android:layout_below="@+id/cyly"
+                    android:text="收件人："
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_15"
+                    android:id="@+id/express_datetime"
+                    android:layout_below="@+id/express_number"
+                    android:text="包裹重量为：25KG"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_15"
+                    android:id="@+id/kdps"
+                    android:layout_below="@+id/express_datetime"
+                    android:text="包裹快递费用为：15元"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:layout_marginTop="@dimen/px_15"
+                    android:id="@+id/cygs"
+                    android:layout_below="@+id/kdps"
+                    android:text="所选承运公司为：EMS"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <ImageView
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/px_10"
+                    android:layout_below="@+id/kdps"
+                    android:src="@drawable/phone_icon"
+                    android:layout_width="@dimen/px_44"
+                    android:layout_height="@dimen/px_44" />
+                <TextView
+                    android:layout_marginBottom="@dimen/px_60"
+                    android:layout_marginTop="@dimen/px_15"
+                    android:id="@+id/kddh_number"
+                    android:layout_below="@+id/cygs"
+                    android:text="快递单号：20161218041301"
+                    android:textColor="@color/cl_333333"
+                    android:textSize="@dimen/px_28"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/receive_expressage_rv"
+                    android:layout_marginBottom="@dimen/px_80"
+                    android:layout_below="@+id/kddh_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginBottom="@dimen/px_96"
+                android:paddingBottom="@dimen/px_40"
+                android:paddingLeft="@dimen/px_32"
+                android:paddingRight="@dimen/px_32"
+                android:background="@color/white"
+                android:layout_marginTop="@dimen/px_20"
+                android:layout_below="@+id/two"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/bh"
+                    android:layout_marginTop="@dimen/px_30"
+                    android:text="请输入货柜编号"
+                    android:textSize="@dimen/px_32"
+                    android:textColor="@color/cl_333333"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+                <EditText
+                    android:layout_marginTop="20px"
+                    android:id="@+id/sr_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:layout_below="@+id/bh"
+                    android:background="@drawable/edit_shape"
+                    android:gravity="center_vertical"
+                    android:hint="请输入货柜编号"
+                    android:paddingLeft="@dimen/px_20"
+                    android:singleLine="true"
+                    android:inputType="phone|number"
+                    android:textColor="@color/cl_333333"
+                    android:textColorHint="@color/cl_b3b3b3"
+                    android:textCursorDrawable="@drawable/edit_cursor"
+                    android:textSize="@dimen/px_30" />
+            </RelativeLayout>
+        </LinearLayout>
+    </com.example.me_jie.snailexpress_staff.custom.MyScrollview>
+    <Button
+        android:id="@+id/affirm_godown_btn"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@color/cl_6fd1c8"
+        android:gravity="center"
+        android:text="确认入库"
+        android:textColor="@color/white"
+        android:textSize="@dimen/px_32" />
+</RelativeLayout>

@@ -1,0 +1,58 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.example.me_jie.snailexpress_staff"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    lintOptions{
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.3.1'
+    testCompile 'junit:junit:4.12'
+    compile 'com.github.chrisbanes.photoview:library:1.2.4'
+    //屏幕适配
+    compile project(':autolayout')
+    compile 'com.jakewharton:butterknife:5.1.1'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+    compile 'com.google.code.gson:gson:2.2.4'
+    compile project(path: ':pickerview')
+    compile project(':baseadapter-recyclerview')
+    compile project(':tkrefreshlayout')
+    //时间选择器
+    compile 'com.jzxiang.pickerview:TimePickerDialog:1.0.0'
+    compile 'com.github.bumptech.glide:glide:3.8.0'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile project(':searchbox')
+    compile files('libs/Msc.jar')
+    compile files('libs/Sunflower.jar')
+    // -------------------- 扫码以下三个库是必须依赖的 ----------------------------
+    compile 'pub.devrel:easypermissions:0.1.7'
+    //    android 7.0兼容
+    compile 'com.google.zxing:core:3.2.1'
+    compile 'cn.bingoogolapple:bga-qrcodecore:1.1.7@aar'
+    compile 'cn.bingoogolapple:bga-zxing:1.1.7@aar'
+    // -------------------- 以上三个库是必须依赖的 ----------------------
+    compile project(path: ':Codelibrary')
+    compile project(':okgo')
+}

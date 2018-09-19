@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingRight="@dimen/px_32"
+    android:paddingLeft="@dimen/px_32"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/char_datetime"
+        android:textColor="@color/cl_999999"
+        android:text="2016/12/18  9:00"
+        android:textSize="@dimen/px_26"
+        android:layout_marginBottom="@dimen/px_20"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:id="@+id/left_layout"
+        android:layout_marginBottom="@dimen/px_30"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left">
+        <ImageView
+            android:id="@+id/head1"
+            android:src="@drawable/head_icon"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80" />
+        <TextView
+            android:background="@drawable/chatfrom_bg_normal"
+            android:gravity="center"
+            android:layout_marginLeft="@dimen/px_30"
+            android:text="11111111111111"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28"
+            android:id="@+id/left_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_80"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/px_30"
+        android:id="@+id/right_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right">
+        <TextView
+            android:gravity="center"
+            android:layout_marginRight="@dimen/px_30"
+            android:text=""
+            android:background="@drawable/chatto_bg_normal"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_28"
+            android:id="@+id/right_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/px_80"
+            android:layout_gravity="center"
+            />
+        <ImageView
+            android:id="@+id/head2"
+            android:src="@drawable/head_icon"
+            android:layout_width="@dimen/px_80"
+            android:layout_height="@dimen/px_80" />
+    </LinearLayout>
+</LinearLayout>

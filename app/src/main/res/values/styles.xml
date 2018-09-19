@@ -1,0 +1,60 @@
+<resources>
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!--沉浸式状态栏-->
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="BaseAppTheme" parent="AppTheme.Base">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/transparence</item>    <!-- 状态栏 -->
+        <item name="colorPrimaryDark">@color/transparence</item> <!-- toolbar -->
+        <item name="colorAccent">@color/colorAccent</item>  <!-- 重点 -->
+    </style>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="BaseAppTheme"/>
+
+    <!--黑/白闪退-->
+    <style name="SplashTheme" parent="android:Theme">
+        <item name="android:windowBackground">@mipmap/bg</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--点击图片放大-->
+    <style name="popup_anim_style">
+        <item name="android:windowEnterAnimation">@anim/photoview_enter</item>
+        <item name="android:windowExitAnimation">@anim/photoview_exit</item>
+    </style>
+    <!--仿微信滑动按钮-->
+    <style name="def_switch_view">
+        <item name="switch_bg_color">#999999</item>
+        <item name="switch_ball_color">#ffffff</item>
+    </style>
+    <!--自定义弹窗-->
+    <style name="Dialog" parent="android:style/Theme.Dialog">
+        <item name="android:background">#00000000</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+    <!--ProgressDialog延迟加载样式-->
+    <style name="ProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+    <style name="ProgressDialogStyle" parent="@style/ProgressDialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+</resources>

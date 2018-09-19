@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_parcel_particulars"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".ui.StaffPerformanceFindActivity">
+
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="业绩查询"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+
+        <ImageView
+            android:id="@+id/search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:scaleType="center"
+            android:src="@drawable/find_seach_icon" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/cl_f5f5f5">
+
+        <RadioGroup
+            android:id="@+id/date_radio_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparence"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:tag="week"
+                android:id="@+id/parcel_message_rb"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparence"
+                android:button="@null"
+                android:checked="true"
+                android:gravity="center"
+                android:paddingBottom="@dimen/px_20"
+                android:paddingTop="@dimen/px_20"
+                android:text="本周"
+                android:textColor="@color/radio_textcolor"
+                android:textSize="@dimen/px_30" />
+
+            <RadioButton
+                android:tag="month"
+                android:id="@+id/chat_message_rb"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparence"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="@dimen/px_20"
+                android:paddingTop="@dimen/px_20"
+                android:text="本月"
+                android:textColor="@color/radio_textcolor"
+                android:textSize="@dimen/px_30" />
+
+            <RadioButton
+                android:tag="year"
+                android:id="@+id/system_message_rb"
+                android:layout_width="@dimen/px_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@color/transparence"
+                android:button="@null"
+                android:gravity="center"
+                android:paddingBottom="@dimen/px_20"
+                android:paddingTop="@dimen/px_20"
+                android:text="本年"
+                android:textColor="@color/radio_textcolor"
+                android:textSize="@dimen/px_30" />
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/total_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date_radio_group"
+            android:layout_marginBottom="@dimen/px_20"
+            android:layout_marginLeft="@dimen/px_32"
+            android:text="本周共计：0元"
+            android:textColor="@color/cl_333333"
+            android:textSize="@dimen/px_30" />
+        <com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout
+            android:id="@+id/refresh"
+            android:layout_below="@+id/total_money"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/staff_performance_find_rv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.lcodecore.tkrefreshlayout.TwinklingRefreshLayout>
+        <TextView
+            android:visibility="gone"
+            android:gravity="center"
+            android:text="暂无已业绩查询"
+            android:id="@+id/no_content"
+            android:textSize="@dimen/px_28"
+            android:textColor="@color/cl_999999"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+</LinearLayout>

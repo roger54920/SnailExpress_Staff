@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_staff_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cl_6fd1c8"
+    android:fitsSystemWindows="true"
+    tools:context=".ui.StaffExpressageDetailsActivity">
+
+    <RelativeLayout
+        android:id="@+id/one"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/px_96"
+        android:background="@color/cl_6fd1c8">
+
+        <ImageView
+            android:id="@+id/return_arrows"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/px_12"
+            android:padding="@dimen/px_20"
+            android:src="@mipmap/left_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/delivery_details"
+            android:textColor="@color/white"
+            android:textSize="@dimen/px_36"
+            android:textStyle="normal" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/one"
+        android:background="@color/cl_f5f5f5">
+
+        <com.example.me_jie.snailexpress_staff.custom.MyScrollview
+            android:id="@+id/myScrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/px_97"
+            android:layout_marginTop="@dimen/px_20">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/promptly_send"
+                    android:layout_width="@dimen/px_180"
+                    android:layout_height="@dimen/px_60"
+                    android:layout_gravity="right"
+                    android:layout_marginBottom="@dimen/px_20"
+                    android:layout_marginRight="@dimen/px_32"
+                    android:background="@drawable/parcel_btn"
+                    android:gravity="center"
+                    android:text="@string/confirm_send"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/px_30" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_1"
+                    android:background="@color/cl_e3e3e3" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_80"
+                    android:background="@color/white"
+                    android:paddingLeft="@dimen/px_32">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/sender_information"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_30" />
+
+                    <TextView
+                        android:id="@+id/zoom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/px_12"
+                        android:padding="@dimen/px_20"
+                        android:text="@string/pack_up"
+                        android:textColor="@color/cl_6fd1c8"
+                        android:textSize="@dimen/px_30" />
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/px_1"
+                    android:background="@color/cl_e3e3e3" />
+
+                <LinearLayout
+                    android:id="@+id/expressage"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/px_32"
+                        android:paddingRight="@dimen/px_32">
+
+                        <TextView
+                            android:id="@+id/sender_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_20"
+                            android:text="寄件人：刘小姐"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                        <TextView
+                            android:id="@+id/crate_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:text="时间：2016/12/18 9:00"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                        <TextView
+                            android:id="@+id/sender_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:singleLine="true"
+                            android:text="地址：北京市朝阳区望京花家地北理1号楼3门806"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                        <TextView
+                            android:id="@+id/sender_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/px_30"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:text="电话：13900101234"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_1"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_80"
+                        android:background="@color/white"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="@dimen/px_30"
+                        android:text="@string/recipient_information"
+                        android:textColor="@color/cl_333333"
+                        android:textSize="@dimen/px_30" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_1"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:orientation="vertical"
+                        android:paddingLeft="@dimen/px_32"
+                        android:paddingRight="@dimen/px_32">
+
+                        <TextView
+                            android:id="@+id/receiver_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_20"
+                            android:text="收件人：刘小姐"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                        <TextView
+                            android:id="@+id/receiver_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:singleLine="true"
+                            android:text="地址：北京市朝阳区望京花家地北理1号楼3门806"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                        <TextView
+                            android:id="@+id/receiver_mobile"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/px_40"
+                            android:layout_marginTop="@dimen/px_15"
+                            android:text="电话：13900101234"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_1"
+                        android:background="@color/cl_e3e3e3" />
+
+                    <RelativeLayout
+                        android:id="@+id/sc_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_80"
+                        android:background="@color/white"
+                        android:paddingLeft="@dimen/px_32"
+                        android:paddingRight="@dimen/px_32">
+
+                        <TextView
+                            android:id="@+id/shipper_code"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:text="快递公司：EMS"
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:visibility="gone"
+                        android:id="@+id/cw_rl"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_80"
+                        android:background="@color/white">
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/px_1"
+                            android:background="@color/cl_e3e3e3" />
+
+                        <TextView
+                            android:id="@+id/cost"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerInParent="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="right"
+                            android:paddingRight="@dimen/px_32"
+                            android:text=""
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                        <TextView
+                            android:id="@+id/weight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="@dimen/px_32"
+                            android:text=""
+                            android:textColor="@color/cl_333333"
+                            android:textSize="@dimen/px_30" />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/px_1"
+                        android:background="@color/cl_e3e3e3" />
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/chat_rv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/px_40" />
+            </LinearLayout>
+        </com.example.me_jie.snailexpress_staff.custom.MyScrollview>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_1"
+            android:layout_above="@+id/buttom"
+            android:background="@color/cl_e3e3e3" />
+
+        <RelativeLayout
+            android:id="@+id/buttom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/px_96"
+            android:layout_alignParentBottom="true">
+
+            <ImageView
+                android:id="@+id/voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_32"
+                android:src="@drawable/voice_icon" />
+
+            <EditText
+                android:id="@+id/sr_dialog_box"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/px_70"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/px_30"
+                android:layout_marginRight="@dimen/px_30"
+                android:layout_toLeftOf="@+id/phone"
+                android:layout_toRightOf="@id/voice"
+                android:background="@drawable/dialog_box"
+                android:paddingLeft="@dimen/px_20"
+                android:singleLine="true"
+                android:textColor="@color/cl_333333"
+                android:textCursorDrawable="@drawable/edit_cursor"
+                android:textSize="@dimen/px_30" />
+
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/px_32"
+                android:src="@drawable/chat_phone_icon" />
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>
